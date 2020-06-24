@@ -23,7 +23,9 @@ export class Character {
   }
 
   applyTypeFirewall() {
-    
+    this.type = "firewall"
+    this.attack += 0;
+    this.defense += 4;
   }
 
 };
