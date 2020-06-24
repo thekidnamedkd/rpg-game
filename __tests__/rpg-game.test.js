@@ -1,5 +1,6 @@
 import { Character } from './../src/character.js';
 import { Game } from './../src/rpg-game.js';
+import { Battle } from './../src/battle.js';
 
 describe('character', () => {
 
@@ -62,4 +63,19 @@ describe('game', () => {
     console.log(reusableGame);
     expect(reusableGame.characters).toHaveLength(3);
   });
+});
+
+describe('battle', () => {
+
+  let reusableBatte;
+
+  beforeEach(() => {
+    reusableBattle = new Battle;
+  });
+
+  test('should show beforeEach working', () => {
+    console.log(reuseableBattle);
+  });
+
+
 });

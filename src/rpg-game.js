@@ -1,5 +1,5 @@
 import { Character } from './../src/character.js';
-// import { Battle } from './../src/battlength.js';
+import { Battle } from './../src/battlength.js';
 
 export class Game {
 
