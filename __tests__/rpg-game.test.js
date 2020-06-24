@@ -5,7 +5,7 @@ describe('character', () => {
     let reusableCharacter;
 
     beforeEach(() => {
-      resuableCharacter = new Character(name, type);
+      reusableCharacter = new Character("Steve", "Hacker");
     });
 
     test('should show beforeEach working', () => {
