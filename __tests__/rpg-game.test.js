@@ -1,4 +1,5 @@
 import { Character } from './../src/character.js';
+import { Battle } from './../src/rpg-game.js';
 
 describe('character', () => {
 
@@ -36,5 +37,18 @@ describe('character', () => {
       expect(reusableCharacter.type).toBe("firewall");
       expect(reusableCharacter.attack).toEqual(5);
       expect(reusableCharacter.defense).toEqual(9);
-    })
+    });
+});
+
+describe('battle', () => {
+
+  let reusableBattle;
+
+  beforeEach(() => {
+    reusableBattle = new Battle();
+  });
+
+  test('should show beforeEach working', () => {
+    console.log(reusableBattle);
+  });
 });
