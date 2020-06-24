@@ -3,4 +3,9 @@ export class Character {
   this.name = name;
   this.type = type;
   }
-}
+
+  newChar() {
+    this.name = "Steve";
+    this.type = "Hacker";
+  }
+};
