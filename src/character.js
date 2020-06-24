@@ -11,7 +11,7 @@ export class Character {
   }
 
   applyPlayerTag() {
-
+    this.player = true;
   }
 
   applyTypeHacker() {
