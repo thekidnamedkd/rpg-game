@@ -4,3 +4,7 @@ export class Battle {
     this.turn = true;
   }
 }
+
+addOpponents(){
+
+}

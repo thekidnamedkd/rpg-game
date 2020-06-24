@@ -77,5 +77,9 @@ describe('battle', () => {
     console.log(reuseableBattle);
   });
 
+  test('should correctly add characters to opponents array', () => {
+    reusableBattle.addOpponents();
+    expect(reusableBattle.opponents).toHaveLength(2);
+  });
 
 });
