@@ -1,5 +1,5 @@
 import { Character } from './../src/character.js';
-import { Battle } from './../src/battlength.js';
+import { Battle } from './../src/battle.js';
 
 export class Game {
 
@@ -12,4 +12,4 @@ export class Game {
     this.characters.push(new Character("Joe").applyTypeWorm());
     this.characters.push(new Character("Bob").applyTypeFirewall());
   }
-}
+} 

@@ -67,19 +67,13 @@ describe('game', () => {
 
 describe('battle', () => {
 
-  let reusableBatte;
+  let reusableBattle;
 
   beforeEach(() => {
     reusableBattle = new Battle;
   });
 
   test('should show beforeEach working', () => {
-    console.log(reuseableBattle);
+    console.log(reusableBattle);
   });
-
-  test('should correctly add characters to opponents array', () => {
-    reusableBattle.addOpponents();
-    expect(reusableBattle.opponents).toHaveLength(2);
-  });
-
 });
