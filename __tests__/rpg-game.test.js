@@ -44,11 +44,19 @@ describe('battle', () => {
 
   let reusableBattle;
 
+  let reusableCharacterOne;
+  let reusableCharacterTwo;
+
   beforeEach(() => {
     reusableBattle = new Battle();
   });
 
   test('should show beforeEach working', () => {
     console.log(reusableBattle);
+  });
+
+  test('should correctly add opponents to array', () => {
+    reusableBattle.startBattle();
+    expect(this.opponents).toContain(reusableCharacterOne, reusableCharacterTwo);
   });
 });
