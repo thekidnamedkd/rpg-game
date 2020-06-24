@@ -16,4 +16,8 @@ export class Character {
     this.defense += 2;
   }
 
+  applyTypeWorm() {
+
+  }
+
 };
