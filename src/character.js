@@ -11,7 +11,9 @@ export class Character {
   }
 
   applyTypeHacker() {
-    
+    this.type = "hacker"
+    this.attack += 2;
+    this.defense += 2;
   }
 
 };

@@ -19,6 +19,7 @@ describe('character', () => {
 
     test('type hacker should correctly affect base skill value', () => {
       reusableCharacter.applyTypeHacker();
+      expect(reusableCharacter.type).toBe("hacker");
       expect(reusableCharacter.attack).toEqual(7);
       expect(reusableCharacter.defense).toEqual(7);
     });
