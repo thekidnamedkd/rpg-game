@@ -1,5 +1,5 @@
 import { Character } from './../src/character.js';
-import { Battle } from './../src/rpg-game.js';
+import { Game } from './../src/rpg-game.js';
 
 describe('character', () => {
 
@@ -16,6 +16,11 @@ describe('character', () => {
     test('should correctly apply name to character constructor', () => {
       reusableCharacter.newChar();
       expect(reusableCharacter.name).toBe("Steve");
+    });
+
+    test('should correctly apply player tag to character', () => {
+      reusableCharacter.applyPlayerTag();
+      expect(reusableCharacter.player).toBe(true);
     });
 
     test('type hacker should correctly affect base skill values', () => {
@@ -40,23 +45,21 @@ describe('character', () => {
     });
 });
 
-describe('battle', () => {
+describe('game', () => {
 
-  let reusableBattle;
-
-  let reusableCharacterOne;
-  let reusableCharacterTwo;
+  let reusableGame;
 
   beforeEach(() => {
-    reusableBattle = new Battle();
+    reusableGame = new Game();
   });
 
   test('should show beforeEach working', () => {
-    console.log(reusableBattle);
+    console.log(reusableGame);
   });
 
-  test('should correctly add opponents to array', () => {
-    reusableBattle.startBattle();
-    expect(this.opponents).toContain(reusableCharacterOne, reusableCharacterTwo);
+  test('should correctly add characters to array', () => {
+    reusableGame.startGame();
+    console.log(reusableGame);
+    expect(reusableGame.characters).toHaveLength(3);
   });
 });

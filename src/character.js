@@ -10,6 +10,10 @@ export class Character {
     this.name = "Steve";
   }
 
+  applyPlayerTag() {
+
+  }
+
   applyTypeHacker() {
     this.type = "hacker"
     this.attack += 2;

@@ -11,9 +11,10 @@ _A text-based cyberpunk RPG battle simulator based on a attack and defense attri
 ### Specs
 | Spec | Input | Output |
 | :---- | :---- | :---- |
-| Program will create 3 different character options based on pre-made attributes. | input: pick character | output: character selected |
-| Program will ask user for name of character. | input: Kevin | output: k3v1n
-| Program starts game and sets up two sequential battles with the 2 other characters. | input: start quest | output: first battle |
+| Program will prompt user name and apply name to character | Steve | Character name: Steve  |
+| Program will prompt user 3 different character options and apply pre-made attributes to character. | Character Type Selected | Character name: Steve Character type: Hacker |
+| Program will start game with 3 characters, 1 player-controlled, 2 computer-controlled. |  |  |  
+| Program will offer battles with the 2 computer controlled characters. | input: start quest | output: first battle |
 | Program will declare victory or defeat based on random math of 1 or 2 battles. | input: battle mode | output: Victory! / Try again! |
 
 
