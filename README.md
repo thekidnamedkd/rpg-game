@@ -1,16 +1,19 @@
-# _PROJECT NAME_
+# _RPG GAME_
 
-#### _SHORT DESCR_
+#### _A quick character battler to study ES6, TDD, Webpack_
 
-#### By _**YOUR NAME HERE**_
+#### By _**KEVIN DAVIS & JOHNNILS OLSON**_
 
 ## Description
 
-_Long deiscription._
+_A text-based cyberpunk RPG battle simulator based on a attack and defense attributes._
 
 ### Specs
 | Spec | Input | Output |
-| :-------------     | :------------- | :------------- |
+| :---- | :---- | :---- |
+| Program will create 3 different character options based on pre-made attributes. | input: pick character | output: character selected |
+| Program starts game and sets up two sequential battles with the 2 other characters. | input: start quest | output: first battle |
+| Program will declare victory or defeat based on random math of 1 or 2 battles. | input: battle mode | output: Victory! / Try again! |
 
 
 ## Setup/Installation Requirements
@@ -26,7 +29,7 @@ _Long deiscription._
 _ _
 ## Support and contact details
 
-_Contact me at...._
+_Contact the devs at: Kevin Davis <thekidnamedkd@gmail.com> // JohnNils Olson <johnnils@gmail.com>_
 
 ## Technologies Used
 
