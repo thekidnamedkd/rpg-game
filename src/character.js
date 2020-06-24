@@ -22,4 +22,8 @@ export class Character {
     this.defense += 0;
   }
 
+  applyTypeFirewall() {
+    
+  }
+
 };

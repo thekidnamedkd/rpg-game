@@ -29,5 +29,12 @@ describe('character', () => {
       expect(reusableCharacter.type).toBe("worm");
       expect(reusableCharacter.attack).toEqual(9);
       expect(reusableCharacter.defense).toEqual(5);
+    });
+
+    test('type firewall should correctly affect base skill values', () => {
+      reusableCharacter.applyTypeFirewall();
+      expect(reusableCharacter.type).toBe("firewall");
+      expect(reusableCharacter.attack).toEqual(5);
+      expect(reusableCharacter.defense).toEqual(9);
     })
 });
