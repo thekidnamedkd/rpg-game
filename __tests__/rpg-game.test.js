@@ -12,9 +12,14 @@ describe('character', () => {
       console.log(reusableCharacter);
     });
 
-    test('should correctly apply name and type to character constructor', () => {
+    test('should correctly apply name to character constructor', () => {
       reusableCharacter.newChar();
       expect(reusableCharacter.name).toBe("Steve");
-      expect(reusableCharacter.type).toBe("Hacker");
+    });
+
+    test('type hacker should correctly affect base skill value', () => {
+      reusableCharacter.applyTypeHacker();
+      expect(reusableCharacter.attack).toEqual(7);
+      expect(reusableCharacter.defense).toEqual(7);
     });
 });

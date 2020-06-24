@@ -1,11 +1,17 @@
 export class Character {
-  constructor(name, type) {
-  this.name = name;
-  this.type = type;
+  constructor(name, type, attack, defense) {
+    this.name = name;
+    this.type = type;
+    this.attack = 5;
+    this.defense = 5;
   }
 
   newChar() {
     this.name = "Steve";
-    this.type = "Hacker";
   }
+
+  applyTypeHacker() {
+    
+  }
+
 };
