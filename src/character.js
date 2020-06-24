@@ -17,7 +17,9 @@ export class Character {
   }
 
   applyTypeWorm() {
-
+    this.type = "worm"
+    this.attack += 4;
+    this.defense += 0;
   }
 
 };
