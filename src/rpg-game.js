@@ -23,7 +23,10 @@ export class Game {
   }
 
   buildCpuTwo(){
-
+    let cpuPlayerTwo = new Character;
+    cpuPlayerTwo.newChar("bob");
+    cpuPlayerTwo.applyTypeFirewall();
+    this.characters.push(cpuPlayerTwo);
   }
 
   // startGame() {
