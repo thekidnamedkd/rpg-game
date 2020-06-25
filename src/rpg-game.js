@@ -1,11 +1,11 @@
 import { Character } from './../src/character.js';
-import { Battle } from './../src/battle.js';
 
 export class Game {
-  constructor (characters, battle, turn) {
+  constructor (characters, battle, turn, attackRoll) {
     this.characters = [];
     this.battle = [];
     this.turn = true;
+    this.attackRoll = attackRoll;
   }
 
   buildPlayerChar(){
@@ -33,5 +33,9 @@ export class Game {
   initiateBattle() {
     this.battle = ([this.characters[0], this.characters[1]]);
     this.turn = true;    
-  } 
+  }
+
+  battleAttack() {
+    
+  }
 }

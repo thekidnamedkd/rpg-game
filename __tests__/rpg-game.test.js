@@ -80,4 +80,14 @@ describe('game', () => {
     console.log(reusableGame.characters);
     console.log(reusableGame.battle);
   });
+
+
+  test('should correctly calculate attack damage', () => {
+    reusableGame.buildPlayerChar();
+    reusableGame.buildCpuOne();
+    reusableGame.buildCpuTwo();
+    reusableGame.initiateBattle();
+    reusableGame.attack();
+    expect(reusableGame.attackRoll).toBeLessThanOrEqual(7);
+  });
 });
