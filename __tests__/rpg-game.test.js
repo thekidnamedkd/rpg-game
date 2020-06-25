@@ -4,45 +4,45 @@ import { Battle } from './../src/battle.js';
 
 describe('character', () => {
 
-    let reusableCharacter;
+  let reusableCharacter;
 
-    beforeEach(() => {
-      reusableCharacter = new Character();
-    });
+  beforeEach(() => {
+    reusableCharacter = new Character();
+  });
 
-    test('should show beforeEach working', () => {
-    });
+  test('should show beforeEach working', () => {
+  });
 
-    test('should correctly apply name to character constructor', () => {
-      reusableCharacter.newChar("Steve");
-      expect(reusableCharacter.name).toBe("Steve");
-    });
+  test('should correctly apply name to character constructor', () => {
+    reusableCharacter.newChar("Steve");
+    expect(reusableCharacter.name).toBe("Steve");
+  });
 
-    test('should correctly apply player tag to character', () => {
-      reusableCharacter.applyPlayerTag();
-      expect(reusableCharacter.player).toBe(true);
-    });
+  test('should correctly apply player tag to character', () => {
+    reusableCharacter.applyPlayerTag();
+    expect(reusableCharacter.player).toBe(true);
+  });
 
-    test('type hacker should correctly affect base skill values', () => {
-      reusableCharacter.applyTypeHacker();
-      expect(reusableCharacter.type).toBe("hacker");
-      expect(reusableCharacter.attack).toEqual(7);
-      expect(reusableCharacter.defense).toEqual(7);
-    });
+  test('type hacker should correctly affect base skill values', () => {
+    reusableCharacter.applyTypeHacker();
+    expect(reusableCharacter.type).toBe("hacker");
+    expect(reusableCharacter.attack).toEqual(7);
+    expect(reusableCharacter.defense).toEqual(7);
+  });
 
-    test('type worm should correctly affect base skill values', () => {
-      reusableCharacter.applyTypeWorm();
-      expect(reusableCharacter.type).toBe("worm");
-      expect(reusableCharacter.attack).toEqual(9);
-      expect(reusableCharacter.defense).toEqual(5);
-    });
+  test('type worm should correctly affect base skill values', () => {
+    reusableCharacter.applyTypeWorm();
+    expect(reusableCharacter.type).toBe("worm");
+    expect(reusableCharacter.attack).toEqual(9);
+    expect(reusableCharacter.defense).toEqual(5);
+  });
 
-    test('type firewall should correctly affect base skill values', () => {
-      reusableCharacter.applyTypeFirewall();
-      expect(reusableCharacter.type).toBe("firewall");
-      expect(reusableCharacter.attack).toEqual(5);
-      expect(reusableCharacter.defense).toEqual(9);
-    });
+  test('type firewall should correctly affect base skill values', () => {
+    reusableCharacter.applyTypeFirewall();
+    expect(reusableCharacter.type).toBe("firewall");
+    expect(reusableCharacter.attack).toEqual(5);
+    expect(reusableCharacter.defense).toEqual(9);
+  });
 });
 
 describe('game', () => {
@@ -96,7 +96,7 @@ describe('game', () => {
     reusableGame.buildCpuTwo();
     reusableGame.initiateBattle();
     reusableGame.battleAttack();
-    expect(reusableGame.defenseRoll).toBeLessThanOrEqual(7);
+    expect(reusableGame.defenseRoll).toBeLessThanOrEqual(5);
     console.log(reusableGame.defenseRoll);
   });
 });
