@@ -31,5 +31,4 @@ export class Character {
     this.attack += 0;
     this.defense += 4;
   }
-
 };

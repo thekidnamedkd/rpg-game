@@ -58,11 +58,16 @@ describe('game', () => {
     console.log(reusableGame);
   });
 
-  test('should correctly add characters to array', () => {
-    reusableGame.startGame();
-    console.log(reusableGame);
-    expect(reusableGame.characters).toHaveLength(3);
+  test('should correctly build player character', () => {
+    reusableGame.buildPlayerChar();
+    expect(player).toMatchObject("Steve", "Hacker",7 ,7, true);
   });
+
+  // test('should correctly add characters to array', () => {
+  //   reusableGame.startGame();
+  //   console.log(reusableGame);
+  //   expect(reusableGame.characters).toHaveLength(3);
+  // });
 });
 
 describe('battle', () => {

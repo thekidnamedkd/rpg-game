@@ -7,9 +7,16 @@ export class Game {
     this.characters = [];
   }
 
-  startGame() {
-    this.characters.push(new Character("Steve").applyTypeHacker());
-    this.characters.push(new Character("Joe").applyTypeWorm());
-    this.characters.push(new Character("Bob").applyTypeFirewall());
+  buildPlayerChar(){
+    // let player = new Character;
+    // player.newChar();
+    // player.applyPlayerTag();
+    // player.applyTypeHacker();
   }
+
+  // startGame() {
+  // this.characters.push(player);
+  // this.characters.push(computerPlayerOne);
+  // this.characters.push(computerPlayerTwo);
+  //}
 } 
