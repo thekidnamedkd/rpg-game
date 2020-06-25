@@ -69,6 +69,12 @@ describe('game', () => {
     expect(reusableGame.characters).toHaveLength(1);
     console.log(reusableGame.characters);
   });
+
+  test('should correctly build cpu character two and add to characters array', () => {
+    reusableGame.buildCpuTwo();
+    expect(reusableGame.characters).toHaveLength(1);
+    console.log(reusableGame.characters);
+  });
 });
 
 describe('battle', () => {

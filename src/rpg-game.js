@@ -22,6 +22,10 @@ export class Game {
     this.characters.push(cpuPlayerOne);
   }
 
+  buildCpuTwo(){
+
+  }
+
   // startGame() {
   // this.characters.push(player);
   // this.characters.push(computerPlayerOne);
