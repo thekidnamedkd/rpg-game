@@ -9,14 +9,17 @@ export class Game {
 
   buildPlayerChar(){
     let player = new Character;
-    player.newChar();
+    player.newChar("steve");
     player.applyPlayerTag();
     player.applyTypeHacker();
     this.characters.push(player);
   }
 
   buildCpuOne(){
-
+    let cpuPlayerOne = new Character;
+    cpuPlayerOne.newChar("joe");
+    cpuPlayerOne.applyTypeWorm();
+    this.characters.push(cpuPlayerOne);
   }
 
   // startGame() {

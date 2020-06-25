@@ -15,7 +15,7 @@ describe('character', () => {
     });
 
     test('should correctly apply name to character constructor', () => {
-      reusableCharacter.newChar();
+      reusableCharacter.newChar("Steve");
       expect(reusableCharacter.name).toBe("Steve");
     });
 

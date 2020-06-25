@@ -6,8 +6,8 @@ export class Character {
     this.defense = 5;
   }
 
-  newChar() {
-    this.name = "Steve";
+  newChar(name) {
+    this.name = name;
   }
 
   applyPlayerTag() {
