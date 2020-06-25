@@ -36,6 +36,9 @@ export class Game {
   }
 
   battleAttack() {
+    let damage;
+    let {attack} = this.characters[0];
+    this.attackRoll = Math.floor((Math.random() * (attack)) + 1);
     
   }
 }

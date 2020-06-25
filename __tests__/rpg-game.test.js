@@ -77,17 +77,26 @@ describe('game', () => {
     reusableGame.buildCpuTwo();
     reusableGame.initiateBattle();
     expect(reusableGame.battle).toEqual([{name:"steve", type:"hacker", attack: 7, defense: 7, player: true}, {name: "joe", type: "worm", attack: 9, defense: 5}]);
-    console.log(reusableGame.characters);
-    console.log(reusableGame.battle);
   });
 
 
-  test('should correctly calculate attack damage', () => {
+  test('should correctly calculate attack value', () => {
     reusableGame.buildPlayerChar();
     reusableGame.buildCpuOne();
     reusableGame.buildCpuTwo();
     reusableGame.initiateBattle();
-    reusableGame.attack();
+    reusableGame.battleAttack();
     expect(reusableGame.attackRoll).toBeLessThanOrEqual(7);
+    console.log(reusableGame.attackRoll);
+  });
+
+  test('should correctly calculate defense value', () => {
+    reusableGame.buildPlayerChar();
+    reusableGame.buildCpuOne();
+    reusableGame.buildCpuTwo();
+    reusableGame.initiateBattle();
+    reusableGame.battleAttack();
+    expect(reusableGame.defenseRoll).toBeLessThanOrEqual(7);
+    console.log(reusableGame.defenseRoll);
   });
 });
