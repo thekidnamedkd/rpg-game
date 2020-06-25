@@ -1,11 +1,13 @@
 import { Character } from './../src/character.js';
 
 export class Game {
-  constructor (characters, battle, turn, attackRoll) {
+  constructor (characters, battle, turn, attackRoll, defenseRoll, damage) {
     this.characters = [];
     this.battle = [];
     this.turn = true;
     this.attackRoll = attackRoll;
+    this.defenseRoll = defenseRoll;
+    this.damage = damage;
   }
 
   buildPlayerChar(){
@@ -36,10 +38,14 @@ export class Game {
   }
 
   battleAttack() {
-    let damage;
     let {attack} = this.characters[0];
-    this.attackRoll = Math.floor((Math.random() * (attack)) + 1);
+    this.attackRoll = Math.floor(Math.random() * Math.floor(attack));
     let {defense} = this.characters[1];
-    this.defenseRoll = Math.floor((Math.random() * (defense)) +1);
+    this.defenseRoll = Math.floor(Math.random() * Math.floor(defense));
+    if (this.attackRoll > this.defenseRoll) {
+      this.damage = this.attackRoll - this.defenseRoll;
+    } else {
+      this.damage = 0;
+    }
   }
 }

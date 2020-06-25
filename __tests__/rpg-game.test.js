@@ -99,4 +99,14 @@ describe('game', () => {
     expect(reusableGame.defenseRoll).toBeLessThanOrEqual(5);
     console.log(reusableGame.defenseRoll);
   });
+
+  test('should correctly calculate damage for player attack', () => {
+    reusableGame.buildPlayerChar();
+    reusableGame.buildCpuOne();
+    reusableGame.buildCpuTwo();
+    reusableGame.initiateBattle();
+    reusableGame.battleAttack();
+    expect(reusableGame.damage).toBeGreaterThanOrEqual(0);
+    console.log(reusableGame.damage);
+  });
 });
