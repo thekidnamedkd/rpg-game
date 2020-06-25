@@ -58,16 +58,17 @@ describe('game', () => {
     console.log(reusableGame);
   });
 
-  test('should correctly build player character', () => {
+  test('should correctly build player character and add to characters array', () => {
     reusableGame.buildPlayerChar();
-    expect(player).toMatchObject("Steve", "Hacker",7 ,7, true);
+    expect(reusableGame.characters).toHaveLength(1);
+    console.log(reusableGame.characters);
   });
 
-  // test('should correctly add characters to array', () => {
-  //   reusableGame.startGame();
-  //   console.log(reusableGame);
-  //   expect(reusableGame.characters).toHaveLength(3);
-  // });
+  test('should correctly build cpu character one and add to characters array', () => {
+    reusableGame.buildCpuOne();
+    expect(reusableGame.characters).toHaveLength(1);
+    console.log(reusableGame.characters);
+  });
 });
 
 describe('battle', () => {

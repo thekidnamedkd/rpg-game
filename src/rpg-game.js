@@ -8,10 +8,15 @@ export class Game {
   }
 
   buildPlayerChar(){
-    // let player = new Character;
-    // player.newChar();
-    // player.applyPlayerTag();
-    // player.applyTypeHacker();
+    let player = new Character;
+    player.newChar();
+    player.applyPlayerTag();
+    player.applyTypeHacker();
+    this.characters.push(player);
+  }
+
+  buildCpuOne(){
+
   }
 
   // startGame() {
