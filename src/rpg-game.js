@@ -2,9 +2,10 @@ import { Character } from './../src/character.js';
 import { Battle } from './../src/battle.js';
 
 export class Game {
-
-  constructor (characters) {
+  constructor (characters, battle, turn) {
     this.characters = [];
+    this.battle = [];
+    this.turn = true;
   }
 
   buildPlayerChar(){
@@ -29,9 +30,8 @@ export class Game {
     this.characters.push(cpuPlayerTwo);
   }
 
-  // startGame() {
-  // this.characters.push(player);
-  // this.characters.push(computerPlayerOne);
-  // this.characters.push(computerPlayerTwo);
-  //}
-} 
+  initiateBattle() {
+    this.battle = ([this.characters[0], this.characters[1]]);
+    this.turn = true;    
+  } 
+}

@@ -11,7 +11,6 @@ describe('character', () => {
     });
 
     test('should show beforeEach working', () => {
-      console.log(reusableCharacter);
     });
 
     test('should correctly apply name to character constructor', () => {
@@ -55,37 +54,30 @@ describe('game', () => {
   });
 
   test('should show beforeEach working', () => {
-    console.log(reusableGame);
   });
 
   test('should correctly build player character and add to characters array', () => {
     reusableGame.buildPlayerChar();
     expect(reusableGame.characters).toHaveLength(1);
-    console.log(reusableGame.characters);
   });
 
   test('should correctly build cpu character one and add to characters array', () => {
     reusableGame.buildCpuOne();
-    expect(reusableGame.characters).toHaveLength(1);
-    console.log(reusableGame.characters);
+    expect(reusableGame.characters).toHaveLength(1);;
   });
 
   test('should correctly build cpu character two and add to characters array', () => {
     reusableGame.buildCpuTwo();
     expect(reusableGame.characters).toHaveLength(1);
+  });
+
+  test('should correctly add characters to battlefield', () => {
+    reusableGame.buildPlayerChar();
+    reusableGame.buildCpuOne();
+    reusableGame.buildCpuTwo();
+    reusableGame.initiateBattle();
+    expect(reusableGame.battle).toEqual([{name:"steve", type:"hacker", attack: 7, defense: 7, player: true}, {name: "joe", type: "worm", attack: 9, defense: 5}]);
     console.log(reusableGame.characters);
-  });
-});
-
-describe('battle', () => {
-
-  let reusableBattle;
-
-  beforeEach(() => {
-    reusableBattle = new Battle;
-  });
-
-  test('should show beforeEach working', () => {
-    console.log(reusableBattle);
+    console.log(reusableGame.battle);
   });
 });
